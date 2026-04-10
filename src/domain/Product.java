@@ -31,6 +31,9 @@ public class Product implements EntityInterface {
 
     }
 
+    public Product(UUID uuid, String sku, String asas, BigDecimal bigDecimal) {
+    }
+
 
     public String getSku() {
         return Sku;
@@ -80,8 +83,17 @@ public class Product implements EntityInterface {
     }
 
     @Override
+    public UUID getUUID() {
+        return null;
+    }
+
+    public void listAll() {
+    }
+
+    @Override
     public String toString() {
         return "Product{" +
+                "UUID'" + uuid.toString() +'\'' +
                 "Sku='" + Sku + '\'' +
                 ", name='" + name + '\'' +
                 ", price=" + price +
